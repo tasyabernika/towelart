@@ -1,0 +1,411 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef9f4;
+  color: #444;
+  line-height: 1.6;
+}
+
+main {
+  padding-top: 4.2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.header {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(255, 222, 219, 0.5);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-family: 'Leckerli One', cursive;
+  font-size: 2rem;
+  color: #a14e5c;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.header-link {
+  color: #6d4c4c;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: #b87777;
+  text-decoration: underline;
+}
+
+.header-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.header-toggle span {
+  width: 1.5rem;
+  height: 0.25rem;
+  background-color: #6d4c4c;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header-toggle {
+    display: flex;
+  }
+
+  .header-links {
+    position: fixed;
+    top: 4.2rem;
+    right: 0;
+    transform: translateX(100%);
+    padding: 1rem 2rem;
+    width: calc(100% - 2rem);
+    max-width: 20rem;
+    height: 100vh;
+    background-color: #fff0f0;
+    flex-direction: column;
+    transition: transform 0.1s linear;
+  }
+
+  .header-links.open {
+    transform: translateX(0);
+  }
+}
+
+.footer {
+  background-color: #fbdedb;
+  padding: 1rem 0;
+  text-align: center;
+  color: #6d4c4c;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, rgba(255, 228, 232, 0.8), rgba(255, 248, 240, 0.7));
+  padding: 5rem 0;
+}
+
+.hero-content {
+  max-width: 50rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  color: #b75d69;
+  font-size: 3.5rem;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero-img {
+  max-width: 15rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  color: #5e4444;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.hero-button {
+  display: inline-block;
+  color: #6d4c4c;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #ffd1dc;
+  padding: 0.75rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #fcb6c4;
+}
+
+.about {
+  background-color: #fff0f0;
+  padding: 5rem 0;
+}
+
+.about .container {
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #b75d69;
+  margin-bottom: 20px;
+  font-family: 'Leckerli One', cursive;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.about-section h3 {
+  color: #a75c6e;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-section ul {
+  color: #5e4c4c;
+  padding: 0;
+  list-style: none;
+}
+
+.about-section a {
+  color: #5e4c4c;
+  font-weight: 500;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.definition {
+  background-color: #fffaf7;
+  padding: 5rem 0;
+}
+
+.definition .container {
+  color: #5a4a4a;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 50rem;
+}
+
+.definition-title {
+  color: #b75d69;
+  font-size: 2.4rem;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.definition p {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.definition img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.types {
+  background-color: #fef6f8;
+  padding: 5rem 0;
+}
+
+.types .container {
+  text-align: center;
+}
+
+.types-title {
+  color: #c96578;
+  font-family: 'Leckerli One', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.types-intro {
+  color: #6e4c4c;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  max-width: 50rem;
+}
+
+.types-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.types-card {
+  width: calc((100% / 3) - 1rem);
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.types-card:hover {
+  transform: translateY(-5px);
+}
+
+.types-card img {
+  width: 100%;
+  height: 9.75rem;
+  object-fit: cover;
+}
+
+.types-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  gap: 0.7rem;
+}
+
+.types-card h3 {
+  color: #a14e5c;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.types-card p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #5f4c4c;
+  margin: 0;
+}
+
+.types-card a {
+  display: block;
+  color: #6d4c4c;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #ffd1dc;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.types-card a:hover {
+  background-color: #fcb6c4;
+}
+
+@media (max-width: 768px) {
+  .types-card {
+    width: calc((100% / 2) - 0.75rem);
+  }
+}
+
+.tutorial {
+  background-color: #fffaf7;
+  padding: 7.5rem 0;
+}
+
+.tutorial-title {
+  font-family: 'Leckerli One', cursive;
+  color: #c96578;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tutorial-video {
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tutorial-video iframe {
+  display: block;
+}
+
+.tutorial-info h3 {
+  color: #a14e5c;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.tutorial-info ul,
+.tutorial-info ol {
+  margin-left: 1.5rem;
+  color: #5e4c4c;
+  line-height: 1.8;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2.5rem;
+  background-color: #ffd1dc;
+  color: #5e4040;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #fcb6c4;
+}

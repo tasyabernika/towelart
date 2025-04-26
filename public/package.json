@@ -1,0 +1,21 @@
+{
+  "name": "towelart",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "build": "echo \"Build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qoriib/towelart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/qoriib/towelart/issues"
+  },
+  "homepage": "https://github.com/qoriib/towelart#readme",
+  "description": ""
+}
